@@ -1,24 +1,23 @@
-import { nanoid } from 'nanoid';
 import styled from './Feedback.module.css';
 import PropTypes from 'prop-types';
-const Feedback = ({ options, onLeaveFeedback }) => {
+const Feedback = ({ onClickGood, onClickNeutral, onClickBad }) => {
   return (
     <div className={styled.buttons}>
-      {options.map(key => (
-        <button
-          type="button"
-          className={styled.button}
-          key={nanoid()}
-          onClick={e => onLeaveFeedback(e)}
-        >
-          {key}
-        </button>
-      ))}
+      <button type="button" className={styled.button} onClick={onClickGood}>
+        good
+      </button>
+      <button type="button" className={styled.button} onClick={onClickNeutral}>
+        neutral
+      </button>
+      <button type="button" className={styled.button} onClick={onClickBad}>
+        bad
+      </button>
     </div>
   );
 };
 Feedback.propTypes = {
-  options: PropTypes.arrayOf(PropTypes.string).isRequired,
-  onLeaveFeedback: PropTypes.func.isRequired,
+  onClickGood: PropTypes.func.isRequired,
+  onClickNeutral: PropTypes.func.isRequired,
+  onClickBad: PropTypes.func.isRequired,
 };
 export default Feedback;
