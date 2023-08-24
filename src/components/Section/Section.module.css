@@ -1,0 +1,13 @@
+.section{
+    width: 500px;
+    padding: 20px;
+    margin-left: auto;
+    margin-right: auto;
+    
+}
+.title{
+    font-size: 24px;
+    font-weight: 500;
+    margin: auto;
+    margin-bottom: 10px;
+}

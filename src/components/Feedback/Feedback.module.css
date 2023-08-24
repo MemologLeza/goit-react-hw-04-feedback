@@ -1,0 +1,14 @@
+.buttons{
+    display: flex;
+        justify-content: flex-start;
+        gap: 15px;
+     
+}
+.button{
+    border-radius: 10%;
+    border: 1px solid lightgrey;
+    padding: 10px;
+}
+.button:hover{
+    background-color: lightgreen;
+}
